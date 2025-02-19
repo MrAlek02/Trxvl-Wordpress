@@ -1,0 +1,189 @@
+.categories {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.swiper-slide {
+    width: fit-content !important;
+}
+
+.hero-subtitle {
+    color: white;
+    position: relative;
+    top: 20;
+    margin-bottom: 20px;
+}
+
+.categories {
+    margin-bottom: 10px;
+}
+
+.categories a {
+    color: grey;
+    text-decoration: none;
+}
+
+.categories a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.categories-margin {
+    margin-top: -20%;
+}
+
+.category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 75px;
+}
+
+.category img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    display: block;
+}
+
+@media (max-width: 1200px) {
+    .categories {
+        filter: drop-shadow(0 0 black);
+        margin-right: 0;
+    }
+
+    .categories-margin {
+        margin-top: 0;
+    }
+
+    .category {
+        margin-right: 0 !important;
+    }
+
+    .category a:hover {
+        color: black;
+    }
+
+    .subtitle h1 {
+        font-size: 24px;
+    }
+
+    .hero-subtitle h1 {
+        font-size: 24px;
+        color: black;
+        margin-top: 20px;
+    }
+}
+
+.destinations-mtn {
+    margin-left: 10%;
+    margin-bottom: 5%;
+}
+
+.destination-mtn {
+    position: relative;
+    top: 10;
+}
+
+.card-mtn {
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 17px;
+    background-color: white;
+    height: auto;
+    width: auto;
+    padding: 16px;
+    margin-bottom: 5%;
+}
+
+.card-mtn img {
+    border-radius: 8px;
+}
+
+.card-mtn a {
+    text-decoration: none;
+    color: black;
+}
+
+.card-mtn h2 {
+    font-weight: 400;
+}
+
+.card-mtn h3 {
+    font-weight: 400;
+    opacity: 50%;
+    padding: 0;
+    margin: 0;
+}
+
+.mtn-title-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.mtn-title-row img {
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.mtn-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.mtn-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mtn-icon p {
+    margin: 0;
+    padding: 0;
+    opacity: 50%;
+    font-weight: 400;
+    padding-top: 10px;
+}
+
+.card-mtn ul {
+    padding-left: 16px;
+}
+
+.card-mtn li {
+    padding: 5px;
+    opacity: 50%;
+}
+
+.mtn-price {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+}
+
+.mtn-price h3 {
+    text-decoration: line-through;
+    opacity: 50%;
+    font-weight: 100;
+}
+
+.mtn-price h2 {
+    font-weight: 700;
+    margin: 0;
+    margin-left: 10%;
+}
+
+.mtn-price p {
+    opacity: 50%;
+    font-weight: 400;
+    margin: 0;
+    font-size: 13px;
+    margin-top: 10px;
+}

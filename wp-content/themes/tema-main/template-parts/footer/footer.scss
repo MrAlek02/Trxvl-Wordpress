@@ -1,0 +1,21 @@
+@import '../../src/scss/base/fonts';
+
+.footer {
+  @extend .r-16-400;
+  margin-top: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-color: $grey;
+  color: $white;
+
+  a {
+    color: $yellow;
+    transition: color $dur1 ease-out;
+
+    @include hover {
+      color: $yellow2;
+    }
+  }
+}

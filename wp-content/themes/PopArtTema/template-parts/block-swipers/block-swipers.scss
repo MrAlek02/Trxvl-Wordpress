@@ -1,0 +1,108 @@
+.categories {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.swiper-slide {
+    width: fit-content !important;
+}
+
+.hero-subtitle {
+    color: white;
+    position: relative;
+    top: 20;
+    margin-bottom: 20px;
+}
+
+.categories {
+    margin-bottom: 4%;
+}
+
+.categories a {
+    color: grey;
+    text-decoration: none;
+}
+
+.categories a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.category img {
+    opacity: 40%;
+}
+
+.categories-margin {
+    margin-top: -20%;
+}
+
+.category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 75px;
+}
+
+.category img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.destinations {
+    margin-left: 10%;
+}
+
+.destination {
+    position: relative;
+}
+
+.destination img {
+    border-radius: 9px;
+}
+
+.destination-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    color: white;
+}
+
+.destination-info h2 {
+    margin: 0;
+}
+
+@media (max-width: 1200px) {
+    .categories {
+        filter: drop-shadow(0 0 black);
+        margin-right: 0;
+    }
+
+    .categories-margin {
+        margin-top: 0;
+    }
+
+    .category {
+        margin-right: 0 !important;
+    }
+
+    .category a:hover {
+        color: black;
+    }
+
+    .destination img {
+        width: 230px;
+    }
+
+    .subtitle h1 {
+        font-size: 24px;
+    }
+
+    .hero-subtitle h1 {
+        font-size: 24px;
+        color: black;
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,88 @@
+/* This file will is not imported anywhere, just pick the class you need cad copy it to base.scss ( copy keyframes to animations.scss ) */
+
+// Link underline animation
+
+.line-link {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background-color: $grey;
+    height: 2px;
+    top: 100%;
+    left: 0;
+    will-change: transform;
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
+  }
+  &:hover {
+    &::after {
+      transform-origin: 0% 50%;
+      transform: scale3d(1, 1, 1);
+      transition-timing-function: cubic-bezier(0.7, 0, 0.2, 1);
+    }
+  }
+}
+
+// Fake checkbox
+
+@keyframes checkbox {
+  0% {
+    stroke-dashoffset: 11.5559482574;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.fake-checkbox {
+  margin: 20px;
+}
+
+.fake-checkbox_input {
+  display: none;
+  &:checked {
+    & ~ .fake-checkbox_label {
+      .fake-checkbox_box {
+        border: 1px solid #144069;
+        background: #144069;
+      }
+      path {
+        animation: checkbox 0.3s forwards;
+        animation-delay: 0.2s;
+      }
+    }
+  }
+}
+
+.fake-checkbox_label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.fake-checkbox_box {
+  margin-right: 12px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #d3d4d6;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  display: flex;
+  transition: 0.3s border, 0.3s background-color;
+  position: relative;
+  svg {
+    path {
+      stroke-dasharray: 11.5559482574;
+      stroke-dashoffset: 11.5559482574;
+    }
+  }
+}
+
+.fake-checkbox_title {
+  color: $black;
+}

@@ -1,0 +1,142 @@
+@use "@/scss/base/fonts" as *;
+
+footer h1 {
+  margin: 0;
+}
+
+footer {
+  color: white;
+  background: rgba(20, 20, 20, 1);
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  padding-top: 50px;
+}
+
+.footer-logo {
+  font-size: 35.42px;
+  font-weight: 700;
+}
+
+.footer-menus {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 10%;
+  flex: 1;
+}
+
+.footer-menus ul {
+  list-style-type: none;
+}
+
+.footer-menu li {
+  padding-bottom: 15px;
+}
+
+.footer-menu {
+  padding-right: 2%;
+}
+
+.footer-menus a {
+  text-decoration: none;
+  color: rgba(128, 128, 128, 1);
+  font-size: 14.39px;
+  font-weight: 400;
+}
+
+.footer-menu a:hover {
+  color: white;
+}
+
+.footer-down {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 20%;
+}
+
+.footer-social a {
+  padding-right: 22.14px;
+}
+
+.footer-btn button {
+  padding: 11.07px 16.61px 11.07px 16.61px;
+  gap: 0px;
+  border: 1.11px solid rgba(128, 128, 128, 1);
+  background-color: transparent;
+  color: rgba(128, 128, 128, 1);
+  opacity: 0px;
+}
+
+.footer-copyright {
+  color: rgba(128, 128, 128, 1);
+  margin-top: 2%;
+  padding-bottom: 5%;
+  text-align: center;
+}
+
+.footer-copyright p {
+  margin: 0;
+}
+
+.container {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+@media (max-width: 1200px) {
+  .footer-btn {
+    padding-bottom: 30px;
+  }
+
+  .footer-social {
+    padding-bottom: 10px;
+  }
+
+  .footer-copyright p {
+    margin: 0;
+    margin-bottom: 30%;
+  }
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .mobile-menu {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 16px 8px 24px 8px;
+  }
+
+  .mobile-menu img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .mobile-menu a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
+    opacity: 40%;
+  }
+
+  .mobile-menu a.active {
+    color: rgba(38, 89, 195, 1);
+    filter: brightness(0) saturate(100%) invert(31%) sepia(100%) saturate(500%) hue-rotate(200deg);
+    opacity: 100%;
+  }
+}

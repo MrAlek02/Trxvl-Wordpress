@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../../src/fonts/Roboto-Regular.woff2") format("woff2"),
+       url("../../src/fonts/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.r-22-400 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+}
+
+.r-16-400 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0.03em;
+}

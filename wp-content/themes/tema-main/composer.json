@@ -1,0 +1,13 @@
+{
+  "name": "popart/theme",
+  "description": "PopArt Theme Starter",
+  "type": "wordpress-theme",
+  "autoload": {
+    "psr-4": {
+      "PopArt\\": "App"
+    }
+  },
+  "require-dev": {
+    "wp-cli/wp-cli-bundle": "^2.10"
+  }
+}

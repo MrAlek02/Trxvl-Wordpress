@@ -1,0 +1,313 @@
+@forward "@/scss/base/base";
+
+.header {
+  width: 100%;
+  height: auto;
+
+  position: fixed;
+  top: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  z-index: 50;
+
+  &.open {
+    @include mq($menuBreakpoint) {
+      .header__navigation-wrapper {
+        opacity: 1;
+        visibility: visible;
+
+        &::before {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      ul.sub-menu {
+        opacity: 1 !important; //sass-lint:disable-line no-important
+        visibility: visible !important; //sass-lint:disable-line no-important
+      }
+
+      .header__burger {
+        &::before {
+          transform: translate(-50%, 0) rotate(-45deg);
+        }
+
+        &::after {
+          transform: translate(-50%, 0) rotate(45deg);
+        }
+      }
+    }
+  }
+}
+
+.header__inner {
+  max-width: 1760px;
+  width: 92%;
+  height: auto;
+  padding: 34px 0;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mq(1880) {
+    width: 90%;
+  }
+
+  @include mq($menuBreakpoint) {
+    padding: 20px 0;
+  }
+}
+
+.header__logo-link {
+  width: auto;
+  height: auto;
+  display: flex;
+
+  .header__logo,
+  svg {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+
+    @include mq(520) {
+      height: 30px;
+    }
+  }
+}
+
+.header__navigation-wrapper {
+  width: 100%;
+  height: auto;
+
+  @include mq($menuBreakpoint) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100vh;
+    background-color: $white;
+    overflow-x: clip;
+    overflow-y: auto;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity $dur1 ease-out, visibility $dur1 ease-out;
+  }
+
+  @include mq(920) {
+    width: 50%;
+  }
+
+  @include mq(660) {
+    width: 60%;
+  }
+
+  @include mq(520) {
+    width: 100%;
+  }
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100vh;
+    background-color: $op-yellow;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity $dur1 ease-out, visibility $dur1 ease-out;
+  }
+}
+
+.header__navigation-wrapper-inner {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+
+  @include mq($menuBreakpoint) {
+    min-height: 100vh;
+    padding: 115px calc(5vw + 40px) 115px 5%;
+    background-color: $white;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  @include mq(520) {
+    padding: 90px calc(5vw + 30px) 115px 5%;
+  }
+}
+
+.menu-mymenu-container ul>li {
+  display: inline-block;
+}
+
+.menu-mymenu-container li {
+  padding-left: 20px;
+}
+
+.header__navigation-wrapper a {
+  color: $white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.header__navigation {
+  width: 100%;
+  height: auto;
+  margin-left: 60%;
+
+  a {
+    color: $white;
+
+    transition: color $dur1 ease-out;
+
+    @include hover {
+      color: $grey;
+    }
+  }
+
+  &>ul.primary-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @include mq($menuBreakpoint) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    &>li {
+      width: auto;
+      height: auto;
+      margin-left: 56px;
+
+      @include mq($menuBreakpoint) {
+        margin-left: 0;
+        margin-bottom: 32px;
+      }
+
+      &.menu-btn {
+        a {
+          @extend .main-btn--smaller;
+        }
+      }
+
+      &.menu-item-has-children {
+        position: relative;
+
+        @include hover {
+          &>ul.sub-menu {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+
+        &>ul.sub-menu {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          max-width: 320px;
+          width: max-content;
+          height: auto;
+          padding: 18px 18px 24px;
+          border: 1px solid $grey;
+          background-color: $white;
+
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity $dur1 ease-out, visibility $dur1 ease-out;
+
+          @include mq($menuBreakpoint) {
+            max-width: 100%;
+            width: auto;
+            border: none;
+            padding: 0 0 0 24px;
+            margin-top: 16px;
+            position: relative;
+            top: unset;
+            left: unset;
+          }
+
+          &>li {
+            margin-bottom: 18px;
+
+            &:last-of-type {
+              margin-bottom: 0;
+            }
+          }
+
+          ul {
+            display: none;
+          }
+        }
+      }
+
+      &>a {}
+    }
+  }
+}
+
+.header__burger {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  background-color: $yellow;
+  flex-shrink: 0;
+  position: relative;
+  display: none;
+  transition: background-color $dur1 ease-out;
+
+  @include hover {
+    background-color: $yellow2;
+  }
+
+  @include mq($menuBreakpoint) {
+    display: block;
+  }
+
+  @include mq(520) {
+    width: 30px;
+    height: 30px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: $white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transition: transform $dur1 ease-out;
+
+    @include mq(520) {
+      width: 15px;
+    }
+  }
+
+  &::before {
+    transform: translate(-50%, calc(-50% + 4px));
+  }
+
+  &::after {
+    transform: translate(-50%, calc(-50% - 4px));
+  }
+}

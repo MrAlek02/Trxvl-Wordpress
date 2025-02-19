@@ -1,0 +1,29 @@
+{
+  "name": "popart_starter_theme",
+  "version": "1.0.0",
+  "description": "This is PopArt starter theme.",
+  "author": "PopArt Studio",
+  "license": "ISC",
+  "type": "module",
+  "bin": {
+    "gen": "src/cli.js"
+  },
+  "scripts": {
+    "dev": "rimraf ./dist && vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-legacy": "^5.4.3",
+    "dotenv": "^16.4.5",
+    "gsap": "file:./gsap",
+    "postcss": "^8.4.49",
+    "postcss-preset-env": "^10.1.1",
+    "postcss-sort-media-queries": "^5.2.0",
+    "rimraf": "^6.0.1",
+    "sass-embedded": "^1.80.6",
+    "swiper": "^11.2.2",
+    "typescript": "^5.4.2",
+    "vite": "^5.4.10",
+    "vite-plugin-live-reload": "^3.0.3"
+  }
+}

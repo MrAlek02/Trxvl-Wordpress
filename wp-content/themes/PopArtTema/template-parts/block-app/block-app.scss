@@ -1,0 +1,147 @@
+.app {
+    margin-top: 10%;
+}
+
+.app-bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+    position: relative;
+}
+
+.app-container {
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+    margin-right: 10%;
+    position: absolute;
+    bottom: 0;
+    color: white;
+}
+
+.app-content {
+    margin-left: 50px;
+}
+
+.app-content h1 {
+    font-size: 53px;
+    font-weight: 700;
+    padding-top: 3%;
+    padding-bottom: 2%;
+}
+
+.app-content h2 {
+    font-size: 26.57px;
+    font-weight: 400;
+    padding-bottom: 3%;
+}
+
+.app-inputs p {
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.app-inputs button {
+    background-color: transparent;
+    border: 0;
+    color: white;
+    padding: 8.86px 17.71px 8.86px 17.71px;
+    border-radius: 18px;
+}
+
+.app-inputs button.active {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(35.424930572509766px);
+}
+
+.app-src-input {
+    display: flex;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(35.424930572509766px);
+    border-radius: 18px;
+    padding: 8.86px 17.71px 8.86px 17.71px;
+}
+
+.app-src-input input {
+    background-color: transparent;
+    border: 0;
+    border-radius: 18px;
+    padding: 13.28px 8.86px 13.28px 8.86px;
+    flex: 1;
+}
+
+.app-src-input input::placeholder {
+    color: white;
+}
+
+.app-src-input input:focus {
+    outline: none;
+}
+
+.app-src-input button {
+    background: rgba(255, 255, 255, 1);
+    border-radius: 35.42px;
+    padding: 13.28px 35.42px 13.28px 35.42px;
+    color: rgba(38, 89, 195, 1);
+}
+
+.app-inputs {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.app-input img {
+    display: block;
+}
+
+@media (max-width: 1200px) {
+    .app-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        position: relative;
+    }
+
+    .app-inputs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .app-bg {
+        height: auto;
+    }
+
+    .app-content {
+        margin-left: 0;
+    }
+
+    .app-content h1 {
+        font-size: 36px;
+    }
+
+    .app-content h2 {
+        font-size: 18px;
+    }
+
+    .app-src-input {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .app-src-input input {
+        width: 100%;
+        text-align: center;
+    }
+
+    .app-src-input button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .app-mockup {
+        padding-top: 5%;
+    }
+}

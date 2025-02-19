@@ -1,0 +1,76 @@
+@use "sass:map";
+@use "../global" as *;
+@font-face {
+  font-family: "Roboto";
+  src: url("@/fonts/Roboto-Regular.woff2") format("woff2"),
+    url("@/fonts/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@mixin font-style(
+  $family,
+  $size,
+  $weight,
+  $line-height,
+  $letter-spacing: unset
+) {
+  $font-families: (
+    "r": "Roboto",
+    "a": "Arial"
+  );
+
+  $font-family: map.get($font-families, $family);
+
+  font-family: $font-family;
+  font-size: $size + px;
+  font-weight: $weight;
+  line-height: calc($line-height / $size);
+  letter-spacing: $letter-spacing;
+
+  @include mq(1921, min) {
+    font-size: calc($size * 100 / 1920 * 1vw);
+    // line-height: 120%;  Adjusting line-height for large screens ensures text remains visually balanced and avoids excessive spacing between lines.
+  }
+}
+
+//NEW CLEANER CODE FOR FONTS
+.r-22-400 {
+  @include font-style("r", 22, 400, 33);
+  @include mq($lap-small) {
+    font-size: 20px;
+  }
+  @include mq($phone) {
+    font-size: 16px;
+  }
+}
+.r-16-400 {
+  @include font-style("r", 16, 400, 16);
+  @include mq($lap-small) {
+    font-size: 14px;
+  }
+  @include mq($phone) {
+    font-size: 12px;
+  }
+}
+
+//OLD CODE FOR FONTS
+
+// .r-22-400 {
+//   font-family: "Roboto";
+//   font-style: normal;
+//   font-weight: 400;
+//   font-size: 22px;
+//   line-height: 150%;
+//   letter-spacing: 0.03em;
+// }
+
+// .r-16-400 {
+//   font-family: "Roboto";
+//   font-style: normal;
+//   font-weight: 400;
+//   font-size: 16px;
+//   line-height: 100%;
+//   letter-spacing: 0.03em;
+// }
