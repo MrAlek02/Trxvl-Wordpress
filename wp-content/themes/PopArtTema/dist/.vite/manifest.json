@@ -1,0 +1,61 @@
+{
+  "src/fonts/Roboto-Regular.woff": {
+    "file": "Roboto-Regular.CfDDYa6Q.woff",
+    "src": "src/fonts/Roboto-Regular.woff"
+  },
+  "src/fonts/Roboto-Regular.woff2": {
+    "file": "Roboto-Regular.g-opMIF6.woff2",
+    "src": "src/fonts/Roboto-Regular.woff2"
+  },
+  "src/ts/main.ts": {
+    "file": "main.BJm9VINw.js",
+    "name": "main",
+    "src": "src/ts/main.ts",
+    "isEntry": true
+  },
+  "template-parts/block-app/block-app.scss": {
+    "file": "block-app.CGiUfMIC.css",
+    "src": "template-parts/block-app/block-app.scss",
+    "isEntry": true
+  },
+  "template-parts/block-hero/block-hero.scss": {
+    "file": "block-hero.CMCsj72a.css",
+    "src": "template-parts/block-hero/block-hero.scss",
+    "isEntry": true
+  },
+  "template-parts/block-mtn-page/block-mtn-page.scss": {
+    "file": "block-mtn-page.CiwVyZdw.css",
+    "src": "template-parts/block-mtn-page/block-mtn-page.scss",
+    "isEntry": true
+  },
+  "template-parts/block-mtn-swipers/block-mtn-swipers.scss": {
+    "file": "block-mtn-swipers.BdHjruuJ.css",
+    "src": "template-parts/block-mtn-swipers/block-mtn-swipers.scss",
+    "isEntry": true
+  },
+  "template-parts/block-page/block-page.scss": {
+    "file": "block-page.CcRKIxK1.css",
+    "src": "template-parts/block-page/block-page.scss",
+    "isEntry": true
+  },
+  "template-parts/block-swipers/block-swipers.scss": {
+    "file": "block-swipers.B_CuIl2Y.css",
+    "src": "template-parts/block-swipers/block-swipers.scss",
+    "isEntry": true
+  },
+  "template-parts/footer/footer.scss": {
+    "file": "footer.20GV0-cd.css",
+    "src": "template-parts/footer/footer.scss",
+    "isEntry": true
+  },
+  "template-parts/header/header.scss": {
+    "file": "header.BNvDYf_P.css",
+    "src": "template-parts/header/header.scss",
+    "isEntry": true
+  },
+  "template-parts/mountains/mountains.scss": {
+    "file": "mountains.DNnsocY8.css",
+    "src": "template-parts/mountains/mountains.scss",
+    "isEntry": true
+  }
+}

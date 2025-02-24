@@ -104,28 +104,40 @@ $imageText = get_field("image_text");
         <div class="cards-com">
             <div class="swiper">
                 <div class="swiper-wrapper">
-                    <?php if (have_rows('community')): ?>
-                        <?php while (have_rows('community')): the_row();
-                            $imageCom = get_sub_field('community_image');
-                            $subtitleCom = get_sub_field('community_subtitle');
-                            $textCom = get_sub_field('community_text');
-                        ?>
+                    <?php
+                    $query = new WP_Query([
+                        'post_type'      => 'community',
+                        'posts_per_page' => -1,
+                    ]);
+
+                    if ($query->have_posts()) :
+                        while ($query->have_posts()) : $query->the_post();
+
+                            $post_id     = get_the_ID();
+                            $title       = get_the_title($post_id);
+                            $img         = get_the_post_thumbnail_url($post_id);
+                            $description = get_the_excerpt();
+
+                    ?>
                             <div class="swiper-slide">
                                 <div class="card-com | js-community">
                                     <img
-                                        src="<?= $imageCom ?>"
+                                        src="<?= $img ?>"
                                         alt="Card Image"
                                         class="card-com-image" />
                                     <div class="card-com-content">
-                                        <h2 class="card-com-title"><?= $subtitleCom ?></h2>
+                                        <h2 class="card-com-title"><?= $title ?></h2>
                                         <div class="card-com-description">
-                                            <p><?= $textCom ?></p>
+                                            <p><?= $description ?></p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        <?php endwhile; ?>
-                    <?php endif; ?>
+                        <?php endwhile;
+                    else : ?>
+                        <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+                    <?php endif;
+                    ?>
                 </div>
             </div>
         </div>
