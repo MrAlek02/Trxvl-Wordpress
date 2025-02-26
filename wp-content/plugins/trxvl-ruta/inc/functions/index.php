@@ -9,3 +9,8 @@ require_once 'get_hero_background_image.php';
 require_once 'get_offers.php';
 require_once 'get_community.php';
 require_once 'get_footer.php';
+require_once 'get_categories.php';
+require_once 'get_categories_post.php';
+require_once 'get_categories_recently.php';
+require_once 'get_categories_inclusive.php';
+require_once 'get_categories_honeymoon.php';

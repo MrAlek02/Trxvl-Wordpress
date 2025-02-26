@@ -49,4 +49,59 @@ function prefix_register_example_routes()
         'methods'  => WP_REST_Server::READABLE,
         'callback' => 'get_footer_data',
     ]);
+    register_rest_route('trxvl/v1', '/categories/(?P<category_id>\d+)', [
+        'methods' => 'GET',
+        'callback' => 'get_category_acf_fields',
+        'args' => [
+            'category_id' => [
+                'validate_callback' => function ($param, $request, $key) {
+                    return is_numeric($param);
+                }
+            ]
+        ]
+    ]);
+    register_rest_route('trxvl/v1', '/categories/post/(?P<category_id>\d+)', [
+        'methods' => 'GET',
+        'callback' => 'get_category_acf_post',
+        'args' => [
+            'category_id' => [
+                'validate_callback' => function ($param, $request, $key) {
+                    return is_numeric($param);
+                }
+            ]
+        ]
+    ]);
+    register_rest_route('trxvl/v1', '/categories/recently/(?P<category_id>\d+)', [
+        'methods' => 'GET',
+        'callback' => 'get_category_recently',
+        'args' => [
+            'category_id' => [
+                'validate_callback' => function ($param, $request, $key) {
+                    return is_numeric($param);
+                }
+            ]
+        ]
+    ]);
+    register_rest_route('trxvl/v1', '/categories/inclusive/(?P<category_id>\d+)', [
+        'methods' => 'GET',
+        'callback' => 'get_category_inclusive',
+        'args' => [
+            'category_id' => [
+                'validate_callback' => function ($param, $request, $key) {
+                    return is_numeric($param);
+                }
+            ]
+        ]
+    ]);
+    register_rest_route('trxvl/v1', '/categories/honeymoon/(?P<category_id>\d+)', [
+        'methods' => 'GET',
+        'callback' => 'get_category_honeymoon',
+        'args' => [
+            'category_id' => [
+                'validate_callback' => function ($param, $request, $key) {
+                    return is_numeric($param);
+                }
+            ]
+        ]
+    ]);
 }
